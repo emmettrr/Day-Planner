@@ -3,15 +3,15 @@ let currentHour = parseInt(moment().format("H"));
 const rows = document.getElementsByClassName('row')
 const saveBtn = $('.row').children('.btn');
 
+$("#currentDay").text(moment().format("dddd, MMMM YYYY"))
+
 saveBtn.click(function(event) {
     event.preventDefault();
     var textInput = $(this.parentNode).children('.content').attr('id');
     var inputToStorage = $(this.parentNode).children('.content').val();
     localStorage.setItem(textInput, inputToStorage);
+    localStorage.getItem(inputToStorage).append('.content');
 })
-
-
-$("#currentDay").text(moment().format("dddd, MMMM YYYY"))
 
 Array.from(rows).forEach(row => {
     let rowIDString = row.id,
@@ -25,7 +25,7 @@ if (rowHour) {
     } else if ((currentHour < rowHour) && (currentHour >= rowHour - 6)) {
         setColor(row, "green");
     } else if ((currentHour < rowHour) && (currentHour <= rowHour + 6)) {
-        setColor(row, "darkgrey");
+        setColor(row, "grey");
     } else {
         setColor(row, "lightgrey");
     }
