@@ -1,5 +1,5 @@
 let nowTime = moment().format("dddd, MMMM YYYY");
-let currentHour = moment().format("h");
+let currentHour = parseInt(moment().format("H"));
 const hr9 = $("#hour1");
 const hr10 = $("#hour2"); 
 const hr11 = $("#hour3");
@@ -19,8 +19,8 @@ $("#btn1").click(function() {
 
 $("#currentDay").text(moment().format("dddd, MMMM YYYY"))
 
-Array.from('row').forEach(row => {
-    let rowIDString= row.id,
+Array.from(rows).forEach(row => {
+    let rowIDString = row.id,
     rowHour;
 if (rowIDString) {
     rowHour = parseInt(rowIDString);
@@ -28,13 +28,16 @@ if (rowIDString) {
 if (rowHour) {
     if (currentHour === rowHour) {
         setColor(row, "red");
-    } else if ((currentHour < rowHour) && (currentHour > rowHour - 6)) {
+    } else if ((currentHour < rowHour) && (currentHour >= rowHour - 6)) {
         setColor(row, "green");
-
-    } else if ((currentHour < rowHour) && (currentHour > rowHour + 6)) {
-        setColor(row, "lightgrey");
+    } else if ((currentHour < rowHour) && (currentHour <= rowHour + 6)) {
+        setColor(row, "darkgrey");
     } else {
-        setColor(row,"white");
+        setColor(row, "lightgrey");
     }
 }
 });
+
+function setColor(element, color) {
+    element.style.backgroundColor = color;
+  }
