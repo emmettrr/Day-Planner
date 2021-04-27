@@ -1,17 +1,15 @@
 let nowTime = moment().format("dddd, MMMM YYYY");
 let currentHour = parseInt(moment().format("H"));
-const hr9 = $("#hour1");
-const hr10 = $("#hour2"); 
-const hr11 = $("#hour3");
-const hr12 = $("#hour4"); 
-const hr13 = $("#hour5");
-const hr14 = $("#hour6"); 
-const hr15 = $("#hour7"); 
-const hr16 = $("#hour8"); 
-const hr17 = $("#hour9");
 const rows = document.getElementsByClassName('row')
-
-let btn = $("#btn");
+const btn1 = $("#btn1");
+const btn2 = $("#btn2");
+const btn3 = $("#btn3");
+const btn4 = $("#btn4");
+const btn5 = $("#btn5");
+const btn6 = $("#btn6");
+const btn7 = $("#btn7");
+const btn8 = $("#btn8");
+const btn9 = $("#btn9");
 
 $("#btn1").click(function() {
     localStorage.setItem("#text3").text();
