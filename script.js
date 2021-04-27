@@ -10,9 +10,18 @@ const btn6 = $("#btn6");
 const btn7 = $("#btn7");
 const btn8 = $("#btn8");
 const btn9 = $("#btn9");
+const text1 = $("#text1")
+const text2 = $("#text2")
+const text3 = $("#text3")
+const text4 = $("#text4")
+const text5 = $("#text5")
+const text6 = $("#text6")
+const text7 = $("#text7")
+const text8 = $("#text8")
+const text9 = $("#text9")
 
 $("#btn1").click(function() {
-    localStorage.setItem("#text3").text();
+    localStorage.setItem("")
 })
 
 $("#currentDay").text(moment().format("dddd, MMMM YYYY"))
@@ -39,3 +48,4 @@ if (rowHour) {
 function setColor(element, color) {
     element.style.backgroundColor = color;
   }
+
