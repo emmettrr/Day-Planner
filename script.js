@@ -7,8 +7,9 @@ saveBtn.click(function(event) {
     event.preventDefault();
     var textInput = $(this.parentNode).children('.content').attr('id');
     var inputToStorage = $(this.parentNode).children('.content').val();
-    localStorage.setItem(textInput, inputToStorage)
+    localStorage.setItem(textInput, inputToStorage);
 })
+
 
 $("#currentDay").text(moment().format("dddd, MMMM YYYY"))
 
