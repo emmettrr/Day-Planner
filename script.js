@@ -2,6 +2,8 @@ let nowTime = moment().format("dddd, MMMM YYYY");
 let currentHour = parseInt(moment().format("H"));
 const rows = document.getElementsByClassName('row')
 const saveBtn = $('.row').children('.btn');
+var text = document.getElementById('text')
+var hour = document.getElementById('hour1')
 
 $("#currentDay").text(moment().format("dddd, MMMM YYYY"))
 
@@ -10,8 +12,8 @@ saveBtn.click(function(event) {
     var textInput = $(this.parentNode).children('.content').attr('id');
     var inputToStorage = $(this.parentNode).children('.content').val();
     localStorage.setItem(textInput, inputToStorage);
-    localStorage.getItem(inputToStorage).append('.content');
 })
+$("#text").val(localStorage.getItem(JSON.stringify(hour))); 
 
 Array.from(rows).forEach(row => {
     let rowIDString = row.id,
