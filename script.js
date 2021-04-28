@@ -13,7 +13,11 @@ saveBtn.click(function(event) {
     var inputToStorage = $(this.parentNode).children('.content').val();
     localStorage.setItem(textInput, inputToStorage);
 })
-$("#text").val(localStorage.getItem(JSON.stringify(hour))); 
+
+for (let index = 1; index < 9; index++) {
+    console.log('hello')
+    $(`#text${index}`).text(localStorage.getItem(`text${index}`));
+}
 
 Array.from(rows).forEach(row => {
     let rowIDString = row.id,
