@@ -14,7 +14,7 @@ saveBtn.click(function(event) {
     localStorage.setItem(textInput, inputToStorage);
 })
 
-for (let index = 1; index < 9; index++) {
+for (let index = 1; index < 10; index++) {
     $(`#text${index}`).text(localStorage.getItem(`text${index}`));
 }
 
