@@ -2,8 +2,6 @@ let nowTime = moment().format("dddd, MMMM YYYY");
 let currentHour = parseInt(moment().format("H"));
 const rows = document.getElementsByClassName('row')
 const saveBtn = $('.row').children('.btn');
-var text = document.getElementById('text')
-var hour = document.getElementById('hour1')
 
 $("#currentDay").text(moment().format("dddd, MMMM YYYY"))
 
