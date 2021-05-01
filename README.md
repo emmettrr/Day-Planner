@@ -6,3 +6,5 @@
 <br>
 &#x2611; Color-coded the time-slots to make user aware if the time they are choosing is in the past, present, or in the future.
 <br>
+
+![Screenshot-1](./assets/images/whole.png)
