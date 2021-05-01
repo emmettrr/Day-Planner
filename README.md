@@ -8,3 +8,5 @@
 <br>
 
 ![Screenshot-1](./assets/images/whole.png)
+
+[Deploy Website](https://emmettrr.github.io/Day-Planner/)
